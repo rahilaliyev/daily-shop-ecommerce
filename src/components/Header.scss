@@ -1,0 +1,126 @@
+@import "../style/variables.scss";
+
+header {
+  .header-up-container {
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+
+    .header-up {
+      display: flex;
+      justify-content: space-between;
+      .header-up-left {
+        display: flex;
+        .dropdown {
+          padding: 5px 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span {
+            font-size: 12px;
+          }
+          img {
+            margin-right: 5px;
+          }
+        }
+        .currency {
+          padding: 5px 10px;
+          border-left: 1px solid lightgray;
+          border-right: 1px solid lightgray;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span {
+            font-size: 12px;
+          }
+        }
+        .number {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 5px 10px;
+          border-right: 1px solid lightgray;
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+      .header-up-right {
+        display: flex;
+        justify-content: center;
+
+        .header-up-text {
+          padding: 5px 10px;
+          &:nth-child(2),
+          &:nth-child(4) {
+            border-left: 1px solid lightgray;
+            border-right: 1px solid lightgray;
+          }
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .logo-search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo-search {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .search {
+        margin-right: 5%;
+        margin-top: 13px;
+        form {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        input[type="text"] {
+          border: 1px solid #ddd;
+          color: #555;
+          font-size: 14px;
+          font-family: "Raleway", sans-serif;
+          height: 40px;
+          padding: 10px 55px 10px 10px;
+          width: 500px;
+          outline: none;
+        }
+        button {
+          height: 40px;
+          width: 50px;
+          transition: all 0.5s;
+          background-color: #ff6666;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          &:hover {
+            background-color: #ff9494;
+          }
+          .MuiSvgIcon-root {
+            color: white;
+          }
+        }
+      }
+      .wishList {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .MuiSvgIcon-root {
+          color: #ff6666;
+        }
+      }
+    }
+  }
+  .menu {
+    background-color: #ff6666;
+  }
+}
+
+.container {
+  width: $maxWidth;
+}

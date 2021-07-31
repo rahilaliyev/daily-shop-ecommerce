@@ -1,0 +1,94 @@
+@import "../style/variables.scss";
+
+.container {
+  width: $maxWidth;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+      li {
+        color: white;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        &:hover {
+          background-color: white;
+          color: #ff6666;
+          transition: 0.3s all;
+        }
+        .MuiSvgIcon-fontSizeSmall {
+          font-size: 1em;
+          margin-left: 5px;
+        }
+        .navHover {
+          position: absolute;
+          top: 39px;
+          left: 0;
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          box-shadow: 0px 0px 8px rgba(16, 30, 115, 0.12);
+          &:hover {
+            display: flex;
+          }
+          li {
+            color: #ff6666;
+            width: 130px;
+            &:hover {
+              background-color: #ff6666;
+              color: white;
+              transition: 0.3s;
+            }
+            &:last-child:hover {
+              .sub-navHover {
+                display: flex;
+              }
+            }
+          }
+          .sub-navHover {
+            position: absolute;
+            flex-direction: column;
+            display: none;
+            align-items: flex-start;
+            box-shadow: 0px 0px 8px rgba(16, 30, 115, 0.12);
+            position: absolute;
+            top: 0;
+            left: 130px;
+            li {
+              &:last-child:hover {
+                .sub-sub-navHover {
+                  display: flex;
+                }
+              }
+            }
+            .sub-sub-navHover {
+              display: none;
+              flex-direction: column;
+              box-shadow: 0px 0px 8px rgba(16, 30, 115, 0.12);
+              position: absolute;
+              left: 130px;
+            }
+          }
+        }
+        &:hover {
+          .navHover {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
