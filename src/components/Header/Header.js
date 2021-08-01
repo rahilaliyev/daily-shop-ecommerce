@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.scss";
-import englishFlag from "../assets/english.png";
-import Logo from "../assets/Logo.png";
+import englishFlag from "../../assets/english.png";
+import Logo from "../../assets/Logo.png";
 import PhoneIcon from "@material-ui/icons/Phone";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
