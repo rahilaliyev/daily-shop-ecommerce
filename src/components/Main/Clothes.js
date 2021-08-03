@@ -1,48 +1,40 @@
-import React, { useEffect, useState } from "react";
-import Table from "./Table";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { uploadData } from "../../redux/actions/actions";
+import axios from "axios";
+import "./Clothes.scss";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 const Clothes = () => {
-  const [products, setProducts] = useState([]);
-  const columns = React.useMemo(
-    () => [
-      {
-        Header: "Product Image",
-        Cell: ({ row }) => {
-          return (
-            <img
-              class="img-fluid img-rounded"
-              width={200}
-              src={row.original.image}
-              alt="photos"
-            />
-          );
-        },
-      },
-      {
-        Header: "Product Title",
-        accessor: "title", // accessor is the "key" in the data
-      },
-      {
-        Header: "Product Price",
-        accessor: "price",
-      },
-      {
-        Header: "Product Description",
-        accessor: "description",
-      },
-    ],
-    []
-  );
+  const uploadDataInfo = useSelector((state) => state.uploadDataReducer.data);
+  const dispatch = useDispatch();
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((json) => setProducts(json));
-  }, []);
+    axios
+      .get("https://fakestoreapi.com/products")
+      .then((res) => dispatch(uploadData(res.data)))
+      .catch((err) => console.log(err));
+  }, [dispatch]);
+
   return (
-    <div>
-      {" "}
-      <Table columns={columns} data={products} />
-    </div>
+    <section className="clothes">
+      <div className="clothes-container container">
+        {uploadDataInfo.map((item, key) => (
+          <div className="products" key={key}>
+            <div className="product-image">
+              <img src={item.image} alt="Product images" />
+            </div>
+            <p>{item.title}</p>
+            <span>$ {item.price}</span>
+            <div className="product-hover">
+              <button>
+                <ShoppingCartIcon />
+                Add basket
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

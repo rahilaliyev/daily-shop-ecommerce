@@ -1,0 +1,72 @@
+@import "../../style/_variables.scss";
+
+.clothes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .clothes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    margin-top: 20px;
+    .products {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      box-shadow: 0px 4px 16px rgba(16, 30, 115, 0.08);
+      &:hover {
+        .product-hover {
+          opacity: 0.8;
+          transform: translateX(0);
+        }
+      }
+      .product-image {
+        height: 300px;
+        width: 250px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      p {
+        width: 70%;
+        text-align: center;
+      }
+      span {
+        color: $mainColor;
+        font-weight: bold;
+      }
+      .product-hover {
+        transition: 0.3s;
+        position: absolute;
+        opacity: 0;
+        transform: translateX(-20px);
+        button {
+          cursor: pointer;
+          background: #000 none repeat scroll 0 0;
+          bottom: 0;
+          color: $mainColor;
+          font-size: 16px;
+          font-weight: bold;
+          padding: 12px 10px;
+          text-transform: uppercase;
+          outline: none;
+          border: none;
+          border-radius: 5px;
+          .MuiSvgIcon-root {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    width: $maxWidth;
+  }
+}
