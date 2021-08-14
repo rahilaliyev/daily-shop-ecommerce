@@ -5,8 +5,9 @@ import Logo from "../../assets/Logo.png";
 import PhoneIcon from "@material-ui/icons/Phone";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import SearchIcon from "@material-ui/icons/Search";
+
 import Navbar from "./Navbar";
+import SearchBox from "./SearchBox";
 
 const Header = () => {
   return (
@@ -50,14 +51,7 @@ const Header = () => {
           <div className="logo">
             <img src={Logo} alt="Logo" />
           </div>
-          <div className="search">
-            <form action="#">
-              <input type="text" placeholder="Search here ex 'man'" />
-              <button type="submit">
-                <SearchIcon />
-              </button>
-            </form>
-          </div>
+          <SearchBox />
           <div className="wishList">
             <ShoppingBasketIcon /> <span>SHOPPING CARD</span>
           </div>
