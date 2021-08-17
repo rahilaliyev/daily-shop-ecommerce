@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.scss";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const womenLists = [
@@ -29,7 +30,9 @@ const Navbar = () => {
     <div className="menu">
       <nav className="container">
         <ul>
-          <li>Home</li>
+          <li>
+            <Link to="/"> Home </Link>
+          </li>
           <li>
             Men <KeyboardArrowDownIcon fontSize="small" />
             <ul className="navHover">

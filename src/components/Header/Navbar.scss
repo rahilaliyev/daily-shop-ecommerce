@@ -19,16 +19,21 @@
       z-index: 11;
 
       li {
-        color: white;
-        padding: 10px 15px;
         display: flex;
         align-items: center;
         cursor: pointer;
         position: relative;
-        &:hover {
-          background-color: white !important;
-          color: #ff6666;
-          transition: 0.3s all;
+        color: white;
+        padding: 10px 15px;
+        a {
+          color: white;
+          padding: 0 10px;
+          width: 100%;
+          &:hover {
+            background-color: white !important;
+            color: #ff6666;
+            transition: 0.3s all;
+          }
         }
         .MuiSvgIcon-fontSizeSmall {
           font-size: 1em;
