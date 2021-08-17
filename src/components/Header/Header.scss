@@ -71,13 +71,30 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .wishList {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        .MuiSvgIcon-root {
-          color: #ff6666;
+      a {
+        color: black;
+
+        .wishList {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: relative;
+
+          .MuiSvgIcon-root {
+            color: #ff6666;
+          }
+          span {
+            &:nth-child(2) {
+              position: absolute;
+              bottom: 42px;
+              border-radius: 50%;
+              border: 1px solid $mainColor;
+              padding: 0 10px;
+              color: $mainColor;
+              font-weight: bold;
+            }
+          }
         }
       }
     }

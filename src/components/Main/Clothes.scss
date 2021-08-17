@@ -65,4 +65,18 @@
       }
     }
   }
+  .MuiSnackbarContent-root {
+    background-color: $mainColor;
+    .MuiSnackbarContent-action {
+      a {
+        color: white;
+        text-decoration: underline !important;
+        transition: 0.3s;
+        &:hover {
+          background-color: white;
+          color: $mainColor;
+        }
+      }
+    }
+  }
 }

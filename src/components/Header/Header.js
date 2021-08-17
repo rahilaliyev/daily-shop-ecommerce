@@ -5,11 +5,13 @@ import Logo from "../../assets/Logo.png";
 import PhoneIcon from "@material-ui/icons/Phone";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-
+import { useSelector } from "react-redux";
 import Navbar from "./Navbar";
 import SearchBox from "./SearchBox";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const basketCount = useSelector((state) => state.basket.count);
   return (
     <header>
       <div className="header-up-container">
@@ -48,13 +50,19 @@ const Header = () => {
       </div>
       <div className="logo-search-container">
         <div className="logo-search container">
-          <div className="logo">
-            <img src={Logo} alt="Logo" />
-          </div>
+          <Link to="/">
+            <div className="logo">
+              <img src={Logo} alt="Logo" />
+            </div>
+          </Link>
           <SearchBox />
-          <div className="wishList">
-            <ShoppingBasketIcon /> <span>SHOPPING CARD</span>
-          </div>
+          <Link to="/basket">
+            <div className="wishList">
+              <ShoppingBasketIcon />
+              <span>{basketCount}</span>
+              <span>SHOPPING CARD</span>
+            </div>
+          </Link>
         </div>
       </div>
       <Navbar />

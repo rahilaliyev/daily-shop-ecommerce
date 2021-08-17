@@ -11,12 +11,13 @@
   nav {
     ul {
       list-style: none;
-      display: flex;
       margin: 0;
       padding: 0;
       align-items: center;
       display: flex;
       justify-content: space-evenly;
+      z-index: 11;
+
       li {
         color: white;
         padding: 10px 15px;
@@ -25,7 +26,7 @@
         cursor: pointer;
         position: relative;
         &:hover {
-          background-color: white;
+          background-color: white !important;
           color: #ff6666;
           transition: 0.3s all;
         }
@@ -41,6 +42,7 @@
           flex-direction: column;
           align-items: flex-start;
           box-shadow: 0px 0px 8px rgba(16, 30, 115, 0.12);
+          background-color: white;
           &:hover {
             display: flex;
           }
@@ -48,7 +50,7 @@
             color: #ff6666;
             width: 130px;
             &:hover {
-              background-color: #ff6666;
+              background-color: #ff6666 !important;
               color: white;
               transition: 0.3s;
             }
@@ -67,6 +69,7 @@
             position: absolute;
             top: 0;
             left: 130px;
+            background-color: white;
             li {
               &:last-child:hover {
                 .sub-sub-navHover {
@@ -80,6 +83,7 @@
               box-shadow: 0px 0px 8px rgba(16, 30, 115, 0.12);
               position: absolute;
               left: 130px;
+              background-color: white;
             }
           }
         }
