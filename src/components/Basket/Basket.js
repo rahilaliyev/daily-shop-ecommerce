@@ -37,9 +37,7 @@ const Basket = () => {
                 <p>{item.title}</p>
                 <span>$ {item.price}</span>
                 <p>{item.description}</p>
-                <button onClick={() => removeBasket(item.id)}>
-                  Remove item
-                </button>
+                <button onClick={() => removeBasket(item)}>Remove item</button>
               </div>
             </div>
           ))}

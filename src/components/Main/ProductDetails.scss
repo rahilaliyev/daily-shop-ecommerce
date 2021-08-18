@@ -1,0 +1,53 @@
+@import "../../style/_variables.scss";
+
+.productDetails {
+  display: flex;
+  margin: 50px auto;
+  .productDetailsImage {
+    width: 100%;
+    margin-right: 30px;
+    img {
+      object-fit: cover;
+    }
+  }
+  .productDetailsText {
+    width: 80%;
+    p {
+      &:last-child {
+        color: $mainColor;
+        font-weight: bold;
+        font-size: 24px;
+      }
+    }
+    button {
+      cursor: pointer;
+      background: $mainColor;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px 10px;
+      text-transform: uppercase;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      .MuiSvgIcon-root {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .MuiSnackbarContent-root {
+    background-color: $mainColor;
+    .MuiSnackbarContent-action {
+      a {
+        color: white;
+        text-decoration: underline !important;
+        transition: 0.3s;
+        &:hover {
+          background-color: white;
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}

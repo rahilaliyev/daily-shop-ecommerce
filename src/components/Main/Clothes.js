@@ -17,7 +17,7 @@ const Clothes = () => {
       .then((res) => dispatch(uploadData(res.data)))
       .catch((err) => console.log(err));
   }, [dispatch]);
-  
+
   const addBasket = (item) => {
     dispatch(addToBasket(item));
     handleClick();
@@ -37,24 +37,25 @@ const Clothes = () => {
   const action = <Link to="/basket">Go to the basket</Link>;
   // END for making Snackbar
 
-  
   return (
     <section className="clothes">
       <div className="clothes-container container">
         {uploadDataInfo.map((item, key) => (
-          <div className="products" key={key}>
-            <div className="product-image">
-              <img src={item.image} alt="Product images" />
+          <Link to={`/product/${item.id}`}>
+            <div className="products" key={key}>
+              <div className="product-image">
+                <img src={item.image} alt="Product images" />
+              </div>
+              <p>{item.title}</p>
+              <span>$ {item.price}</span>
+              <div className="product-hover">
+                <button onClick={() => addBasket(item)}>
+                  <ShoppingCartIcon />
+                  Add basket
+                </button>
+              </div>
             </div>
-            <p>{item.title}</p>
-            <span>$ {item.price}</span>
-            <div className="product-hover">
-              <button onClick={() => addBasket(item)}>
-                <ShoppingCartIcon />
-                Add basket
-              </button>
-            </div>
-          </div>
+          </Link>
         ))}
       </div>
       <Snackbar

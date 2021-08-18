@@ -12,7 +12,7 @@ const Total = ({ totalprice }) => {
           </tr>
           <tr>
             <td> Total amount</td>
-            <td>{totalprice}</td>
+            <td>$ {totalprice}</td>
           </tr>
         </tbody>
       </table>
