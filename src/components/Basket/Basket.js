@@ -2,11 +2,18 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "./Basket.scss";
 import Total from "./Total.js";
+import { removeFromBasket } from "../../redux/actions/actions";
+import { useDispatch } from "react-redux";
 
 const Basket = () => {
   const basketData = useSelector((state) => state.basket.data);
   let amount = 0;
   basketData.forEach((item) => (amount = amount + item.price));
+
+  const dispatch = useDispatch();
+  const removeBasket = (item) => {
+    dispatch(removeFromBasket(item));
+  };
 
   return (
     <div className="basket container">
@@ -17,7 +24,7 @@ const Basket = () => {
           ) : (
             <h4>
               My {basketData.length}
-              {basketData.length === 1 ? " product" : "products"}
+              {basketData.length === 1 ? " product:" : " products:"}
             </h4>
           )}
 
@@ -30,6 +37,9 @@ const Basket = () => {
                 <p>{item.title}</p>
                 <span>$ {item.price}</span>
                 <p>{item.description}</p>
+                <button onClick={() => removeBasket(item.id)}>
+                  Remove item
+                </button>
               </div>
             </div>
           ))}

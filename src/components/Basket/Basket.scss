@@ -32,6 +32,19 @@
           color: $mainColor;
           font-weight: bold;
         }
+        button {
+          border: none;
+          outline: none;
+          background-color: $mainColor;
+          color: white;
+          text-transform: uppercase;
+          padding: 10px 20px;
+          transition: 0.3s;
+          border-radius: 10px;
+          &:hover {
+            background-color: #ff9494;
+          }
+        }
       }
     }
     .basket-buy-button {

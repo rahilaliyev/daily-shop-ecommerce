@@ -17,6 +17,7 @@ const Clothes = () => {
       .then((res) => dispatch(uploadData(res.data)))
       .catch((err) => console.log(err));
   }, [dispatch]);
+  
   const addBasket = (item) => {
     dispatch(addToBasket(item));
     handleClick();

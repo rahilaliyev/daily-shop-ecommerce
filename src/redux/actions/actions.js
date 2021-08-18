@@ -8,6 +8,6 @@ export const addToBasket = (data) => {
   return { type: ADD_TO_BASKET, data };
 };
 
-export const removeFromBasket = (key) => {
-  return { type: REMOVE_FROM_BASKET, key };
+export const removeFromBasket = (data) => {
+  return { type: REMOVE_FROM_BASKET, data };
 };
