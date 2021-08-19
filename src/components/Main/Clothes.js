@@ -7,6 +7,7 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { addToBasket } from "../../redux/actions/actions";
 import Snackbar from "@material-ui/core/Snackbar";
 import { Link } from "react-router-dom";
+import VisibilityIcon from "@material-ui/icons/Visibility";
 
 const Clothes = () => {
   const uploadDataInfo = useSelector((state) => state.uploadDataReducer.data);
@@ -41,21 +42,25 @@ const Clothes = () => {
     <section className="clothes">
       <div className="clothes-container container">
         {uploadDataInfo.map((item, key) => (
-          <Link to={`/product/${item.id}`}>
-            <div className="products" key={key}>
-              <div className="product-image">
-                <img src={item.image} alt="Product images" />
-              </div>
-              <p>{item.title}</p>
-              <span>$ {item.price}</span>
-              <div className="product-hover">
-                <button onClick={() => addBasket(item)}>
-                  <ShoppingCartIcon />
-                  Add basket
-                </button>
-              </div>
+          <div className="products" key={key}>
+            <div className="product-image">
+              <img src={item.image} alt="Product images" />
             </div>
-          </Link>
+            <p>{item.title}</p>
+            <span>$ {item.price}</span>
+            <div className="product-hover">
+              <button onClick={() => addBasket(item)}>
+                <ShoppingCartIcon />
+                Add basket
+              </button>
+              <Link to={`/product/${item.id}`}>
+                <button>
+                  <VisibilityIcon />
+                  View Product
+                </button>
+              </Link>
+            </div>
+          </div>
         ))}
       </div>
       <Snackbar

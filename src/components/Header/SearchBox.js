@@ -37,15 +37,18 @@ const SearchBox = () => {
           {filteredData.slice(0, 6).map((value, key) => {
             return (
               <div className="dataResults" key={key}>
-                <div className="dataResultImage">
-                  <img src={value.image} alt="Products images" />
-                </div>
-                <div className="dataResultText">
-                  <Link to="#">
-                    <p>{value.title}</p>
-                  </Link>
-                  <span>$ {value.price}</span>
-                </div>
+                <Link to={`/product/${value.id}`}>
+                  <div className="dataResultLink">
+                    <div className="dataResultImage">
+                      <img src={value.image} alt="Products images" />
+                    </div>
+                    <div className="dataResultText">
+                      <p>{value.title}</p>
+
+                      <span>$ {value.price}</span>
+                    </div>
+                  </div>
+                </Link>
               </div>
             );
           })}

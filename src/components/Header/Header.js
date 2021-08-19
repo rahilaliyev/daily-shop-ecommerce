@@ -11,7 +11,7 @@ import SearchBox from "./SearchBox";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const basketCount = useSelector((state) => state.basket.count);
+  const basketCount = useSelector((state) => state.basket.data);
   return (
     <header>
       <div className="header-up-container">
@@ -59,7 +59,7 @@ const Header = () => {
           <Link to="/basket">
             <div className="wishList">
               <ShoppingBasketIcon />
-              <span>{basketCount}</span>
+              <span>{basketCount.length}</span>
               <span>SHOPPING CARD</span>
             </div>
           </Link>
