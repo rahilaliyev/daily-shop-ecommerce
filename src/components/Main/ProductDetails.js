@@ -11,6 +11,7 @@ import "./ProductDetails.scss";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import Snackbar from "@material-ui/core/Snackbar";
 import { Link } from "react-router-dom";
+import Loading from "../Loading/Loading";
 
 const ProductDetails = () => {
   const productData = useSelector((state) => state.product);
@@ -53,30 +54,36 @@ const ProductDetails = () => {
   // END for making Snackbar
 
   return (
-    <div className="productDetails container">
-      <div className="productDetailsImage">
-        <img src={productData.image} alt="Product" />
-      </div>
-      <div className="productDetailsText">
-        <h2>{productData.title}</h2>
-        <p>{productData.description}</p>
-        <p>$ {productData.price}</p>
-        <button onClick={() => addBasket(productData)}>
-          <ShoppingCartIcon /> Add basket
-        </button>
-      </div>
+    <div className="productDetails ">
+      {Object.keys(productData).length === 0 ? (
+        <Loading />
+      ) : (
+        <div className="productDetailsContainer container">
+          <div className="productDetailsImage">
+            <img src={productData.image} alt="Product" />
+          </div>
+          <div className="productDetailsText">
+            <h2>{productData.title}</h2>
+            <p>{productData.description}</p>
+            <p>$ {productData.price}</p>
+            <button onClick={() => addBasket(productData)}>
+              <ShoppingCartIcon /> Add basket
+            </button>
+          </div>
 
-      <Snackbar
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "left",
-        }}
-        open={open}
-        action={action}
-        autoHideDuration={3000}
-        onClose={handleClose}
-        message="Your product was added."
-      />
+          <Snackbar
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "left",
+            }}
+            open={open}
+            action={action}
+            autoHideDuration={3000}
+            onClose={handleClose}
+            message="Your product was added."
+          />
+        </div>
+      )}
     </div>
   );
 };
