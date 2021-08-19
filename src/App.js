@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Basket from "./components/Basket/Basket";
 import Loading from "./components/Loading/Loading";
