@@ -11,8 +11,8 @@ const ProductDetails = lazy(() => import("./components/Main/ProductDetails"));
 function App() {
   return (
     <Router>
-      <Suspense fallback={<Loading />}>
-        <div className="App">
+      <div className="App">
+        <Suspense fallback={<Loading />}>
           <Header />
           <Switch>
             <Route path="/" exact component={() => <Main />} />
@@ -24,8 +24,8 @@ function App() {
           </Switch>
 
           <Footer />
-        </div>
-      </Suspense>
+        </Suspense>
+      </div>
     </Router>
   );
 }
