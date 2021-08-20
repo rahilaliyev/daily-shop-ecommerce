@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
 import englishFlag from "../../assets/english.png";
 import Logo from "../../assets/Logo.png";
@@ -9,9 +9,15 @@ import { useSelector } from "react-redux";
 import Navbar from "./Navbar";
 import SearchBox from "./SearchBox";
 import { Link } from "react-router-dom";
+import ModalButtonLogin from "./ModalButtonLogin";
 
 const Header = () => {
   const basketCount = useSelector((state) => state.basket.data);
+  const [ModalOpenLogin, setModalOpenLogin] = useState(false);
+
+  const setModalOpenFunc = () => {
+    setModalOpenLogin(false);
+  };
   return (
     <header>
       <div className="header-up-container">
@@ -31,19 +37,19 @@ const Header = () => {
           </div>
           <div className="header-up-right">
             <div className="header-up-text">
-              <span>My Account</span>
+              <Link>My Account</Link>
             </div>
             <div className="header-up-text">
-              <span>Wishlist</span>
+              <Link>Wishlist</Link>
             </div>
             <div className="header-up-text">
-              <span>My Cart</span>
+              <Link>My Cart</Link>
             </div>
             <div className="header-up-text">
-              <span>Chechkout</span>
+              <Link>Chechkout</Link>
             </div>
             <div className="header-up-text">
-              <span>Login</span>
+              <button onClick={() => setModalOpenLogin(true)}>Login</button>
             </div>
           </div>
         </div>
@@ -66,6 +72,10 @@ const Header = () => {
         </div>
       </div>
       <Navbar />
+      <ModalButtonLogin
+        ModalOpenLogin={ModalOpenLogin}
+        setModalOpenFunc={setModalOpenFunc}
+      />
     </header>
   );
 };

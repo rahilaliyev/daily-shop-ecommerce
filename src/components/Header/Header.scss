@@ -56,7 +56,18 @@ header {
             border-left: 1px solid lightgray;
             border-right: 1px solid lightgray;
           }
-          span {
+          button {
+            font-size: 14px;
+            color: black;
+            transition: 0.2s;
+            border: none;
+            background: none;
+            &:hover {
+              color: grey;
+            }
+          }
+          a {
+            color: black;
             font-size: 14px;
           }
         }
