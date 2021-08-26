@@ -4,6 +4,9 @@ import {
   REMOVE_FROM_BASKET,
   SELECTED_PRODUCT,
   REMOVE_SELECTED_PRODUCT,
+  ALL_USERS,
+  LOG,
+  REMOVE_LOG,
 } from "./actionTypes";
 
 export const uploadData = (data) => {
@@ -29,4 +32,16 @@ export const removeSelectedProduct = () => {
   return {
     type: REMOVE_SELECTED_PRODUCT,
   };
+};
+
+export const allUser = (data) => {
+  return { type: ALL_USERS, data };
+};
+
+export const logInOut = (log) => {
+  return { type: LOG, log };
+};
+
+export const removeLog = () => {
+  return { type: REMOVE_LOG };
 };

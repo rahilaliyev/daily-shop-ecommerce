@@ -1,0 +1,45 @@
+@import "../../style/_variables.scss";
+
+.loginPaper {
+  form {
+    display: flex;
+    flex-direction: column;
+    input {
+      outline: none;
+    }
+    input[type="text"]:focus {
+      border: 1px solid $mainColor;
+      box-shadow: $mainColor 0px 5px 5px;
+    }
+    input[type="password"]:focus {
+      border: 1px solid $mainColor;
+      box-shadow: $mainColor 0px 5px 5px;
+    }
+    button {
+      cursor: pointer;
+      background: $mainColor !important   ;
+      bottom: 0;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px 10px;
+      text-transform: uppercase;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .input-errors {
+      color: $mainColor;
+      font-size: 12px;
+    }
+    p {
+      a {
+        color: $mainColor;
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+}

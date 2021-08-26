@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 import Navbar from "./Navbar";
 import SearchBox from "./SearchBox";
 import { Link } from "react-router-dom";
-import ModalButtonLogin from "./ModalButtonLogin";
+import ModalButtonLogin from "../LoginRegister/ModalButtonLogin";
 
 const Header = () => {
   const basketCount = useSelector((state) => state.basket.data);
@@ -18,6 +18,7 @@ const Header = () => {
   const setModalOpenFunc = () => {
     setModalOpenLogin(false);
   };
+
   return (
     <header>
       <div className="header-up-container">

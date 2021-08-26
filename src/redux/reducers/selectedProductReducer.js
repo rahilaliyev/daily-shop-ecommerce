@@ -4,7 +4,6 @@ import {
 } from "../actions/actionTypes";
 
 const selectedProductsReducer = (state = {}, { type, payload }) => {
-  console.log(type);
   switch (type) {
     case SELECTED_PRODUCT:
       return { ...state, ...payload };

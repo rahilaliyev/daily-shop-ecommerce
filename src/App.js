@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Loading from "./components/Loading/Loading";
 const ProductDetails = lazy(() => import("./components/Main/ProductDetails"));
 const Basket = lazy(() => import("./components/Basket/Basket"));
+const Register = lazy(() => import("./components/LoginRegister/Register"));
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               path="/product/:productId"
               component={() => <ProductDetails />}
             />
+            <Route path="/register" component={() => <Register />} />
           </Switch>
           <Footer />
         </Suspense>

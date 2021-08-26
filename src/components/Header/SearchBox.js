@@ -20,6 +20,10 @@ const SearchBox = () => {
     }
   };
 
+  const clearInput = () => {
+    setfilteredData([]);
+  };
+
   return (
     <div className="search">
       <div className="searchInput">
@@ -37,7 +41,7 @@ const SearchBox = () => {
           {filteredData.slice(0, 6).map((value, key) => {
             return (
               <div className="dataResults" key={key}>
-                <Link to={`/product/${value.id}`}>
+                <Link to={`/product/${value.id}`} onClick={clearInput}>
                   <div className="dataResultLink">
                     <div className="dataResultImage">
                       <img src={value.image} alt="Products images" />

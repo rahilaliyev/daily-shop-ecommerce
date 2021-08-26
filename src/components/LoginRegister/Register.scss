@@ -1,0 +1,59 @@
+@import "../../style/_variables.scss";
+
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    span {
+      color: $mainColor;
+    }
+    .inputAllcards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .input-rows {
+        margin: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        .input-cards {
+          padding: 20px;
+          .inputLabel {
+            display: flex;
+            flex-direction: column;
+            .input-errors {
+              color: $mainColor;
+              font-size: 12px;
+            }
+            input {
+              width: 300px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+    button {
+      width: 20%;
+      cursor: pointer;
+      background: $mainColor;
+      bottom: 0;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px 10px;
+      text-transform: uppercase;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  }
+}

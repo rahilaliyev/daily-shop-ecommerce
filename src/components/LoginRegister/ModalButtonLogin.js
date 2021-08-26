@@ -28,7 +28,7 @@ const ModalButtonLogin = (props) => {
         <div className="logoModal">
           <img src={Logo} alt="Logo"></img>
         </div>
-        <LoginPaper />
+        <LoginPaper setModalOpenFunc={setModalOpenFunc} />
       </Modal>
     </div>
   );

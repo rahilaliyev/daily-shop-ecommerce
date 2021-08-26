@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 
 const Clothes = () => {
+
   const uploadDataInfo = useSelector((state) => state.uploadDataReducer.data);
   const dispatch = useDispatch();
   useEffect(() => {
