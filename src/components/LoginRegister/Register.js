@@ -3,11 +3,8 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import "./Register.scss";
-import { useDispatch } from "react-redux";
-import { allUser } from "../../redux/actions/actions";
 
 const Register = () => {
-  const dispatch = useDispatch();
   return (
     <div className="register">
       <div className="register-container container">

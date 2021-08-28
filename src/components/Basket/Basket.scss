@@ -45,6 +45,21 @@
             background-color: #ff9494;
           }
         }
+        .quantity {
+          margin: 10px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 20%;
+          border-radius: 0;
+          button {
+            padding: 5px;
+            margin: 0 10px;
+          }
+          .MuiSvgIcon-root {
+            margin: 0;
+          }
+        }
       }
     }
     .basket-buy-button {
