@@ -8,16 +8,14 @@ const initialState = {
 const basketReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_BASKET:
-      return {
-        ...state,
-        data: [...state.data, action.data],
-        count: state.count + 1,
-      };
+      return { ...state, data: [...state.data, { ...action.payload }] };
     case REMOVE_FROM_BASKET:
+      console.log(action.data.id);
       return {
         ...state,
-        data: state.data.filter((card) => card.key !== action.key),
+        data: state.data.filter((productId) => productId.id !== action.data.id),
       };
+
     default:
       return state;
   }

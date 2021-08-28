@@ -4,14 +4,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .clothes-container {
+  margin: 50px;
+  .select {
+    width: 20%;
+  }
+  .product-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 40px;
     grid-row-gap: 40px;
     margin: 30px 0;
-
     .products {
       height: 100%;
       display: flex;

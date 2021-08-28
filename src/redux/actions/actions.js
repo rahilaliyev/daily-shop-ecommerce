@@ -14,7 +14,7 @@ export const uploadData = (data) => {
 };
 
 export const addToBasket = (data) => {
-  return { type: ADD_TO_BASKET, data };
+  return { type: ADD_TO_BASKET, payload: data };
 };
 
 export const removeFromBasket = (data) => {

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import "./Basket.scss";
 import Total from "./Total.js";
 import { removeFromBasket } from "../../redux/actions/actions";
 import { useDispatch } from "react-redux";
+import AddIcon from "@material-ui/icons/Add";
+import RemoveIcon from "@material-ui/icons/Remove";
 
 const Basket = () => {
   const basketData = useSelector((state) => state.basket.data);
@@ -15,6 +17,12 @@ const Basket = () => {
     dispatch(removeFromBasket(item));
   };
 
+  const [quantity, setQuantity] = useState(1);
+  const quantityDecrease = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
   return (
     <div className="basket container">
       <div className="basket-main">
@@ -37,6 +45,16 @@ const Basket = () => {
                 <p>{item.title}</p>
                 <span>$ {item.price}</span>
                 <p>{item.description}</p>
+                <div className="quantity">
+                  Quantity:
+                  <button onClick={() => quantityDecrease()}>
+                    <RemoveIcon />
+                  </button>
+                  <span>{quantity}</span>
+                  <button onClick={() => setQuantity(quantity + 1)}>
+                    <AddIcon />
+                  </button>
+                </div>
                 <button onClick={() => removeBasket(item)}>Remove item</button>
               </div>
             </div>
