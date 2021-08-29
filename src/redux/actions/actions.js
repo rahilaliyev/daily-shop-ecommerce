@@ -7,6 +7,7 @@ import {
   ALL_USERS,
   LOG,
   REMOVE_LOG,
+  INCREASE_QUANTITY,
 } from "./actionTypes";
 
 export const uploadData = (data) => {
@@ -19,6 +20,12 @@ export const addToBasket = (data) => {
 
 export const removeFromBasket = (data) => {
   return { type: REMOVE_FROM_BASKET, data };
+};
+
+export const increaseQuantity = () => {
+  return {
+    type: INCREASE_QUANTITY,
+  };
 };
 
 export const selectedProduct = (product) => {

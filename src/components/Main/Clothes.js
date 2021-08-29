@@ -9,6 +9,7 @@ import Snackbar from "@material-ui/core/Snackbar";
 import { Link } from "react-router-dom";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import Form from "react-bootstrap/Form";
+
 const Clothes = () => {
   const uploadDataInfo = useSelector((state) => state.uploadDataReducer.data);
   const dispatch = useDispatch();

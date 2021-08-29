@@ -1,4 +1,4 @@
-import { ADD_TO_BASKET, REMOVE_FROM_BASKET } from "../actions/actionTypes";
+import { ADD_TO_BASKET, REMOVE_FROM_BASKET, INCREASE_QUANTITY } from "../actions/actionTypes";
 
 const initialState = {
   data: [],
@@ -15,7 +15,10 @@ const basketReducer = (state = initialState, action) => {
         ...state,
         data: state.data.filter((productId) => productId.id !== action.data.id),
       };
-
+      case INCREASE_QUANTITY:
+        return {
+          count: state.count + 1,
+        };
     default:
       return state;
   }

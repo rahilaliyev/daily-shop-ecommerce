@@ -1,9 +1,9 @@
 export const UPLOAD_DATA = "UPLOAD_DATA";
 export const ADD_TO_BASKET = "ADD_TO_BASKET";
 export const REMOVE_FROM_BASKET = "REMOVE_FROM_BASKET";
+export const INCREASE_QUANTITY = "INCREASE_QUANTITY";
 export const SELECTED_PRODUCT = "SELECTED_PRODUCT";
 export const REMOVE_SELECTED_PRODUCT = "REMOVE_SELECTED_PRODUCT";
-export const ALL_USERS = "ALL_USERS"
+export const ALL_USERS = "ALL_USERS";
 export const LOG = "LOG";
 export const REMOVE_LOG = "REMOVE_LOG";
-
