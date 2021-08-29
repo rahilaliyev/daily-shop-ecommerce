@@ -31,6 +31,7 @@ const LoginPaper = (props) => {
             })
             .then((res) => dispatch(logInOut(res.data)))
             .catch((err) => console.log(err));
+          props.setModalOpenFunc();
         }}
       >
         {({ values, errors, handleChange, touched }) => (

@@ -5,18 +5,26 @@ import Logo from "../../assets/Logo.png";
 import PhoneIcon from "@material-ui/icons/Phone";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Navbar from "./Navbar";
 import SearchBox from "./SearchBox";
 import { Link } from "react-router-dom";
 import ModalButtonLogin from "../LoginRegister/ModalButtonLogin";
+import { removeLog } from "../../redux/actions/actions";
 
 const Header = () => {
   const basketCount = useSelector((state) => state.basket.data);
+  const dispatch = useDispatch();
   const [ModalOpenLogin, setModalOpenLogin] = useState(false);
 
   const setModalOpenFunc = () => {
     setModalOpenLogin(false);
+  };
+
+  const isLogged = useSelector((state) => state.login.data);
+
+  const logout = () => {
+    dispatch(removeLog());
   };
 
   return (
@@ -36,23 +44,36 @@ const Header = () => {
               <span>00-62-658-658</span>
             </div>
           </div>
-          <div className="header-up-right">
-            <div className="header-up-text">
-              <Link>My Account</Link>
+          {isLogged ? (
+            <div className="header-up-right">
+              <div className="header-up-text">
+                <Link>My Account</Link>
+              </div>
+              <div className="header-up-text">
+                <Link>Wishlist</Link>
+              </div>
+              <div className="header-up-text">
+                <Link>My Cart</Link>
+              </div>
+              <div className="header-up-text">
+                <Link to="/basket">Chechkout</Link>
+              </div>
+              <div className="header-up-text">
+                <button onClick={() => logout()}>Logout</button>
+              </div>
             </div>
-            <div className="header-up-text">
-              <Link>Wishlist</Link>
+          ) : (
+            <div className="header-up-right">
+              <div className="header-up-text">
+                <button>
+                  <Link to="/register">Register</Link>
+                </button>
+              </div>
+              <div className="header-up-text">
+                <button onClick={() => setModalOpenLogin(true)}>Login</button>
+              </div>
             </div>
-            <div className="header-up-text">
-              <Link>My Cart</Link>
-            </div>
-            <div className="header-up-text">
-              <Link>Chechkout</Link>
-            </div>
-            <div className="header-up-text">
-              <button onClick={() => setModalOpenLogin(true)}>Login</button>
-            </div>
-          </div>
+          )}
         </div>
       </div>
       <div className="logo-search-container">

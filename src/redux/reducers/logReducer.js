@@ -14,7 +14,7 @@ const logInOut = (state = initialState, action) => {
     case REMOVE_LOG:
       return {
         ...state,
-        data: "Log In",
+        data: "",
       };
     default:
       return state;
