@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/daily-shop-ecommerce/static/css/main.00cdd926.chunk.css",
-    "main.js": "/daily-shop-ecommerce/static/js/main.aab445f7.chunk.js",
-    "main.js.map": "/daily-shop-ecommerce/static/js/main.aab445f7.chunk.js.map",
-    "runtime-main.js": "/daily-shop-ecommerce/static/js/runtime-main.acd65f14.js",
-    "runtime-main.js.map": "/daily-shop-ecommerce/static/js/runtime-main.acd65f14.js.map",
+    "main.js": "/daily-shop-ecommerce/static/js/main.f3cfc37d.chunk.js",
+    "main.js.map": "/daily-shop-ecommerce/static/js/main.f3cfc37d.chunk.js.map",
+    "runtime-main.js": "/daily-shop-ecommerce/static/js/runtime-main.30c2ffd9.js",
+    "runtime-main.js.map": "/daily-shop-ecommerce/static/js/runtime-main.30c2ffd9.js.map",
     "static/css/2.9082872e.chunk.css": "/daily-shop-ecommerce/static/css/2.9082872e.chunk.css",
     "static/js/2.4b454982.chunk.js": "/daily-shop-ecommerce/static/js/2.4b454982.chunk.js",
     "static/js/2.4b454982.chunk.js.map": "/daily-shop-ecommerce/static/js/2.4b454982.chunk.js.map",
-    "static/css/3.1b633269.chunk.css": "/daily-shop-ecommerce/static/css/3.1b633269.chunk.css",
-    "static/js/3.2a3e9d50.chunk.js": "/daily-shop-ecommerce/static/js/3.2a3e9d50.chunk.js",
-    "static/js/3.2a3e9d50.chunk.js.map": "/daily-shop-ecommerce/static/js/3.2a3e9d50.chunk.js.map",
-    "static/css/4.0c9a01b1.chunk.css": "/daily-shop-ecommerce/static/css/4.0c9a01b1.chunk.css",
-    "static/js/4.3bd61f36.chunk.js": "/daily-shop-ecommerce/static/js/4.3bd61f36.chunk.js",
-    "static/js/4.3bd61f36.chunk.js.map": "/daily-shop-ecommerce/static/js/4.3bd61f36.chunk.js.map",
+    "static/css/3.0c9a01b1.chunk.css": "/daily-shop-ecommerce/static/css/3.0c9a01b1.chunk.css",
+    "static/js/3.e21b2231.chunk.js": "/daily-shop-ecommerce/static/js/3.e21b2231.chunk.js",
+    "static/js/3.e21b2231.chunk.js.map": "/daily-shop-ecommerce/static/js/3.e21b2231.chunk.js.map",
+    "static/css/4.1b633269.chunk.css": "/daily-shop-ecommerce/static/css/4.1b633269.chunk.css",
+    "static/js/4.141b4e7f.chunk.js": "/daily-shop-ecommerce/static/js/4.141b4e7f.chunk.js",
+    "static/js/4.141b4e7f.chunk.js.map": "/daily-shop-ecommerce/static/js/4.141b4e7f.chunk.js.map",
     "static/css/5.46d09561.chunk.css": "/daily-shop-ecommerce/static/css/5.46d09561.chunk.css",
-    "static/js/5.f0006e02.chunk.js": "/daily-shop-ecommerce/static/js/5.f0006e02.chunk.js",
-    "static/js/5.f0006e02.chunk.js.map": "/daily-shop-ecommerce/static/js/5.f0006e02.chunk.js.map",
+    "static/js/5.1b8d2a39.chunk.js": "/daily-shop-ecommerce/static/js/5.1b8d2a39.chunk.js",
+    "static/js/5.1b8d2a39.chunk.js.map": "/daily-shop-ecommerce/static/js/5.1b8d2a39.chunk.js.map",
     "index.html": "/daily-shop-ecommerce/index.html",
     "static/css/2.9082872e.chunk.css.map": "/daily-shop-ecommerce/static/css/2.9082872e.chunk.css.map",
-    "static/css/3.1b633269.chunk.css.map": "/daily-shop-ecommerce/static/css/3.1b633269.chunk.css.map",
-    "static/css/4.0c9a01b1.chunk.css.map": "/daily-shop-ecommerce/static/css/4.0c9a01b1.chunk.css.map",
+    "static/css/3.0c9a01b1.chunk.css.map": "/daily-shop-ecommerce/static/css/3.0c9a01b1.chunk.css.map",
+    "static/css/4.1b633269.chunk.css.map": "/daily-shop-ecommerce/static/css/4.1b633269.chunk.css.map",
     "static/css/5.46d09561.chunk.css.map": "/daily-shop-ecommerce/static/css/5.46d09561.chunk.css.map",
     "static/css/main.00cdd926.chunk.css.map": "/daily-shop-ecommerce/static/css/main.00cdd926.chunk.css.map",
     "static/js/2.4b454982.chunk.js.LICENSE.txt": "/daily-shop-ecommerce/static/js/2.4b454982.chunk.js.LICENSE.txt",
@@ -29,10 +29,10 @@
     "static/media/CarouselPhoto3.48edafe7.jpg": "/daily-shop-ecommerce/static/media/CarouselPhoto3.48edafe7.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.acd65f14.js",
+    "static/js/runtime-main.30c2ffd9.js",
     "static/css/2.9082872e.chunk.css",
     "static/js/2.4b454982.chunk.js",
     "static/css/main.00cdd926.chunk.css",
-    "static/js/main.aab445f7.chunk.js"
+    "static/js/main.f3cfc37d.chunk.js"
   ]
 }
