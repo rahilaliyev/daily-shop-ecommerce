@@ -8,6 +8,7 @@ import {
   LOG,
   REMOVE_LOG,
   INCREASE_QUANTITY,
+  DECRESSE_QUANTITY,
 } from "./actionTypes";
 
 export const uploadData = (data) => {
@@ -25,6 +26,12 @@ export const removeFromBasket = (data) => {
 export const increaseQuantity = () => {
   return {
     type: INCREASE_QUANTITY,
+  };
+};
+
+export const decreaseQuantity = () => {
+  return {
+    type: DECRESSE_QUANTITY,
   };
 };
 
