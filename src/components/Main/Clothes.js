@@ -9,10 +9,17 @@ import Snackbar from "@material-ui/core/Snackbar";
 import { Link } from "react-router-dom";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import Form from "react-bootstrap/Form";
+import ModalButtonLogin from "../LoginRegister/ModalButtonLogin";
 
 const Clothes = () => {
   const uploadDataInfo = useSelector((state) => state.uploadDataReducer.data);
+  const isLogged = useSelector((state) => state.login.data);
   const dispatch = useDispatch();
+  const [ModalOpenLogin, setModalOpenLogin] = useState(false);
+
+  const setModalOpenFunc = () => {
+    setModalOpenLogin(false);
+  };
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")
@@ -63,10 +70,18 @@ const Clothes = () => {
               <p>{item.title}</p>
               <span>$ {item.price}</span>
               <div className="product-hover">
-                <button onClick={() => addBasket(item)}>
-                  <ShoppingCartIcon />
-                  Add basket
-                </button>
+                {isLogged ? (
+                  <button onClick={() => addBasket(item)}>
+                    <ShoppingCartIcon />
+                    Add basket
+                  </button>
+                ) : (
+                  <button onClick={() => setModalOpenLogin(true)}>
+                    <ShoppingCartIcon />
+                    Add basket
+                  </button>
+                )}
+
                 <Link to={`/product/${item.id}`}>
                   <button>
                     <VisibilityIcon />
@@ -78,6 +93,10 @@ const Clothes = () => {
           ))}
         </div>
       </div>
+      <ModalButtonLogin
+        ModalOpenLogin={ModalOpenLogin}
+        setModalOpenFunc={setModalOpenFunc}
+      />
       <Snackbar
         anchorOrigin={{
           vertical: "bottom",

@@ -22,7 +22,6 @@ const Basket = () => {
 
   const incQty = () => {
     dispatch(increaseQuantity());
-    setQuantity(quantity + 1);
   };
 
   return (
