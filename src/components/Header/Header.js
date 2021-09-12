@@ -32,13 +32,6 @@ const Header = () => {
       <div className="header-up-container">
         <div className="header-up container">
           <div className="header-up-left">
-            <div className="dropdown">
-              <img src={englishFlag} alt="English Flag" />
-              <span>ENGLISH</span> <KeyboardArrowDownIcon fontSize="small" />
-            </div>
-            <div className="currency">
-              <span>$ USD</span> <KeyboardArrowDownIcon fontSize="small" />
-            </div>
             <div className="number">
               <PhoneIcon fontSize="small" />
               <span>00-62-658-658</span>

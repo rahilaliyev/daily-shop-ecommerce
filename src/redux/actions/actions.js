@@ -9,10 +9,27 @@ import {
   REMOVE_LOG,
   INCREASE_QUANTITY,
   DECRESSE_QUANTITY,
+  MENS_CATEGORY,
+  WOMENS_CATEGORY,
+  ELECTRONIC_CATEGORY,
+  JEWELLERY_CATEGORY,
 } from "./actionTypes";
 
 export const uploadData = (data) => {
   return { type: UPLOAD_DATA, data };
+};
+
+export const mensCategory = (data) => {
+  return { type: MENS_CATEGORY, data };
+};
+export const womensCategory = (data) => {
+  return { type: WOMENS_CATEGORY, data };
+};
+export const electronicsCategory = (data) => {
+  return { type: ELECTRONIC_CATEGORY, data };
+};
+export const jewelleryCategory = (data) => {
+  return { type: JEWELLERY_CATEGORY, data };
 };
 
 export const addToBasket = (data) => {

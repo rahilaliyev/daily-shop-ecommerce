@@ -5,35 +5,11 @@ header {
     border-bottom: 1px solid lightgray;
     display: flex;
     justify-content: center;
-
     .header-up {
       display: flex;
       justify-content: space-between;
       .header-up-left {
         display: flex;
-        .dropdown {
-          padding: 5px 10px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          span {
-            font-size: 12px;
-          }
-          img {
-            margin-right: 5px;
-          }
-        }
-        .currency {
-          padding: 5px 10px;
-          border-left: 1px solid lightgray;
-          border-right: 1px solid lightgray;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          span {
-            font-size: 12px;
-          }
-        }
         .number {
           display: flex;
           justify-content: center;

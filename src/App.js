@@ -8,7 +8,10 @@ import Loading from "./components/Loading/Loading";
 const ProductDetails = lazy(() => import("./components/Main/ProductDetails"));
 const Basket = lazy(() => import("./components/Basket/Basket"));
 const Register = lazy(() => import("./components/LoginRegister/Register"));
-
+const Men = lazy(() => import("./components/Categories/Mens"));
+const Women = lazy(() => import("./components/Categories/Women"));
+const Electronics = lazy(() => import("./components/Categories/Electronics"));
+const Jewellery = lazy(() => import("./components/Categories/Jewellery"));
 function App() {
   return (
     <Router>
@@ -23,6 +26,19 @@ function App() {
               component={() => <ProductDetails />}
             />
             <Route path="/register" component={() => <Register />} />
+            <Route path="/categories/mensclothing" component={() => <Men />} />
+            <Route
+              path="/categories/womensclothing"
+              component={() => <Women />}
+            />
+            <Route
+              path="/categories/electronics"
+              component={() => <Electronics />}
+            />
+            <Route
+              path="/categories/jewellery"
+              component={() => <Jewellery />}
+            />
           </Switch>
           <Footer />
         </Suspense>

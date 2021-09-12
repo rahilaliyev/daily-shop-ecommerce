@@ -15,7 +15,6 @@ const basketReducer = (state = initialState, action) => {
     case ADD_TO_BASKET:
       return { ...state, data: [...state.data, { ...action.payload }] };
     case REMOVE_FROM_BASKET:
-      console.log(action.data.id);
       return {
         ...state,
         data: state.data.filter((productId) => productId.id !== action.data.id),

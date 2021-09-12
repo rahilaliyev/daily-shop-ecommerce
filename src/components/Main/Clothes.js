@@ -4,10 +4,10 @@ import { uploadData } from "../../redux/actions/actions";
 import axios from "axios";
 import "./Clothes.scss";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import { addToBasket } from "../../redux/actions/actions";
-import Snackbar from "@material-ui/core/Snackbar";
-import { Link } from "react-router-dom";
 import VisibilityIcon from "@material-ui/icons/Visibility";
+import Snackbar from "@material-ui/core/Snackbar";
+import { addToBasket } from "../../redux/actions/actions";
+import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import ModalButtonLogin from "../LoginRegister/ModalButtonLogin";
 

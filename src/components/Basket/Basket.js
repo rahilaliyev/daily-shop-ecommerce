@@ -21,8 +21,8 @@ const Basket = () => {
     dispatch(removeFromBasket(item));
   };
 
-  const incQty = () => {
-    dispatch(increaseQuantity());
+  const incQty = (item) => {
+    dispatch(increaseQuantity(item));
   };
 
   const decQty = () => {
@@ -59,7 +59,7 @@ const Basket = () => {
                     <RemoveIcon />
                   </button>
                   <span>{basketCount}</span>
-                  <button onClick={() => incQty()}>
+                  <button onClick={() => incQty(item)}>
                     <AddIcon />
                   </button>
                 </div>

@@ -4,6 +4,7 @@ import basketReducer from "./basketReducer";
 import selectedProductsReducer from "./selectedProductReducer";
 import allUsersReducer from "./allUsersReducer";
 import logReducer from "./logReducer";
+import categoriesReduceer from "./categoriesReducer";
 
 export default combineReducers({
   uploadDataReducer,
@@ -11,4 +12,5 @@ export default combineReducers({
   product: selectedProductsReducer,
   users: allUsersReducer,
   login: logReducer,
+  categoriesReduceer,
 });
