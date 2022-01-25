@@ -63,7 +63,7 @@ const Clothes = () => {
             onChange={(e) => sortByLowPrice(e.target.value)}
           >
             <option value="default" selected>
-              Filter
+              Filter products
             </option>
             <option value="">From last product</option>
           </Form.Select>
