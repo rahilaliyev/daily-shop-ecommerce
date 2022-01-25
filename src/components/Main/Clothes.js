@@ -46,19 +46,26 @@ const Clothes = () => {
   const action = <Link to="/basket">Go to the basket</Link>;
   // END for making Snackbar
 
-  const sortedProducts = uploadDataInfo.slice();
-  sortedProducts.sort((a, b) => b.id - a.id);
+  const sortByLowPrice = () => {
+    axios
+      .get("https://fakestoreapi.com/products?sort=desc")
+      .then((res) => dispatch(uploadData(res.data)))
+      .catch((err) => console.log(err));
+  };
 
   return (
     <section className="clothes">
       <div className="clothes-container container">
         <div className="select">
-          <Form.Select aria-label="Default select example">
-            <option value="">None</option>
-            <option value="lowest">Lowest</option>
-            <option value="highest">Highest</option>
-            <option value="a-z">A-Z</option>
-            <option value="z-a">Z-A</option>
+          <Form.Select
+            aria-label="Default select example"
+            defaultValue={"default"}
+            onChange={(e) => sortByLowPrice(e.target.value)}
+          >
+            <option value="default" selected>
+              Filter
+            </option>
+            <option value="">From last product</option>
           </Form.Select>
         </div>
         <div className="product-container">

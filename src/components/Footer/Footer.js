@@ -15,19 +15,19 @@ const Footer = () => {
           <h3>Main Menu</h3>
           <ul>
             <li>
-              <Link> Home</Link>
+              <Link to="/"> Home</Link>
             </li>
             <li>
-              <Link> Our Services</Link>
+              <Link to="#"> Our Services</Link>
             </li>
             <li>
-              <Link> Our Products</Link>
+              <Link to="#"> Our Products</Link>
             </li>
             <li>
-              <Link> About Us</Link>
+              <Link to="#"> About Us</Link>
             </li>
             <li>
-              <Link> Contact us</Link>
+              <Link to="#"> Contact us</Link>
             </li>
           </ul>
         </div>
@@ -35,19 +35,19 @@ const Footer = () => {
           <h3>Knowledge Base</h3>
           <ul>
             <li>
-              <Link> Delivery</Link>
+              <Link to="#"> Delivery</Link>
             </li>
             <li>
-              <Link> Returns</Link>
+              <Link to="#"> Returns</Link>
             </li>
             <li>
-              <Link> Services</Link>
+              <Link to="#"> Services</Link>
             </li>
             <li>
-              <Link> Discount</Link>
+              <Link to="#"> Discount</Link>
             </li>
             <li>
-              <Link> Special Offer</Link>
+              <Link to="#"> Special Offer</Link>
             </li>
           </ul>
         </div>
@@ -55,19 +55,19 @@ const Footer = () => {
           <h3>Useful links</h3>
           <ul>
             <li>
-              <Link>Site Map</Link>
+              <Link to="#">Site Map</Link>
             </li>
             <li>
-              <Link>Search</Link>
+              <Link to="#">Search</Link>
             </li>
             <li>
-              <Link>Advanced Search</Link>
+              <Link to="#">Advanced Search</Link>
             </li>
             <li>
-              <Link>Suppliers</Link>
+              <Link to="#">Suppliers</Link>
             </li>
             <li>
-              <Link>FAQ</Link>
+              <Link to="#">FAQ</Link>
             </li>
           </ul>
         </div>
@@ -89,13 +89,13 @@ const Footer = () => {
             </li>
             <li>
               <div className="footer-icons">
-                <Link>
+                <Link to="#">
                   <FacebookIcon fontSize="large" />
                 </Link>
-                <Link>
+                <Link to="#">
                   <TwitterIcon fontSize="large" />
                 </Link>
-                <Link>
+                <Link to="#">
                   <YouTubeIcon fontSize="large" />
                 </Link>
               </div>

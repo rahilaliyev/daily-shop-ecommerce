@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addToBasket,
@@ -10,7 +10,6 @@ import {
 import "./ProductDetails.scss";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import Snackbar from "@material-ui/core/Snackbar";
-import { Link } from "react-router-dom";
 import Loading from "../Loading/Loading";
 
 const ProductDetails = () => {
@@ -32,7 +31,7 @@ const ProductDetails = () => {
     return () => {
       dispatch(removeSelectedProduct());
     };
-  }, []);
+  }, [productId]);
 
   const addBasket = (item) => {
     dispatch(addToBasket(item));

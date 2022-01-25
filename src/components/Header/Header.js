@@ -38,13 +38,13 @@ const Header = () => {
           {isLogged ? (
             <div className="header-up-right">
               <div className="header-up-text">
-                <Link>My Account</Link>
+                <Link to="#">My Account</Link>
               </div>
               <div className="header-up-text">
-                <Link>Wishlist</Link>
+                <Link to="#">Wishlist</Link>
               </div>
               <div className="header-up-text">
-                <Link>My Cart</Link>
+                <Link to="#">My Cart</Link>
               </div>
               <div className="header-up-text">
                 <Link to="/basket">Chechkout</Link>
