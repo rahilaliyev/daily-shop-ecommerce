@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/daily-shop-ecommerce/static/css/main.f82c4e58.chunk.css",
-    "main.js": "/daily-shop-ecommerce/static/js/main.19bbe81d.chunk.js",
-    "main.js.map": "/daily-shop-ecommerce/static/js/main.19bbe81d.chunk.js.map",
-    "runtime-main.js": "/daily-shop-ecommerce/static/js/runtime-main.4becc751.js",
-    "runtime-main.js.map": "/daily-shop-ecommerce/static/js/runtime-main.4becc751.js.map",
+    "main.js": "/daily-shop-ecommerce/static/js/main.1dff8647.chunk.js",
+    "main.js.map": "/daily-shop-ecommerce/static/js/main.1dff8647.chunk.js.map",
+    "runtime-main.js": "/daily-shop-ecommerce/static/js/runtime-main.bad7e2e4.js",
+    "runtime-main.js.map": "/daily-shop-ecommerce/static/js/runtime-main.bad7e2e4.js.map",
     "static/css/2.9082872e.chunk.css": "/daily-shop-ecommerce/static/css/2.9082872e.chunk.css",
     "static/js/2.a8265407.chunk.js": "/daily-shop-ecommerce/static/js/2.a8265407.chunk.js",
     "static/js/2.a8265407.chunk.js.map": "/daily-shop-ecommerce/static/js/2.a8265407.chunk.js.map",
@@ -12,8 +12,8 @@
     "static/js/3.2f5c9dca.chunk.js": "/daily-shop-ecommerce/static/js/3.2f5c9dca.chunk.js",
     "static/js/3.2f5c9dca.chunk.js.map": "/daily-shop-ecommerce/static/js/3.2f5c9dca.chunk.js.map",
     "static/css/4.87157e7b.chunk.css": "/daily-shop-ecommerce/static/css/4.87157e7b.chunk.css",
-    "static/js/4.0ad342df.chunk.js": "/daily-shop-ecommerce/static/js/4.0ad342df.chunk.js",
-    "static/js/4.0ad342df.chunk.js.map": "/daily-shop-ecommerce/static/js/4.0ad342df.chunk.js.map",
+    "static/js/4.9d87aab0.chunk.js": "/daily-shop-ecommerce/static/js/4.9d87aab0.chunk.js",
+    "static/js/4.9d87aab0.chunk.js.map": "/daily-shop-ecommerce/static/js/4.9d87aab0.chunk.js.map",
     "static/css/5.ef1313c5.chunk.css": "/daily-shop-ecommerce/static/css/5.ef1313c5.chunk.css",
     "static/js/5.dd945d54.chunk.js": "/daily-shop-ecommerce/static/js/5.dd945d54.chunk.js",
     "static/js/5.dd945d54.chunk.js.map": "/daily-shop-ecommerce/static/js/5.dd945d54.chunk.js.map",
@@ -45,10 +45,10 @@
     "static/media/CarouselPhoto3.48edafe7.jpg": "/daily-shop-ecommerce/static/media/CarouselPhoto3.48edafe7.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4becc751.js",
+    "static/js/runtime-main.bad7e2e4.js",
     "static/css/2.9082872e.chunk.css",
     "static/js/2.a8265407.chunk.js",
     "static/css/main.f82c4e58.chunk.css",
-    "static/js/main.19bbe81d.chunk.js"
+    "static/js/main.1dff8647.chunk.js"
   ]
 }
