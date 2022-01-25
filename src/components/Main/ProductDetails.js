@@ -31,7 +31,7 @@ const ProductDetails = () => {
     return () => {
       dispatch(removeSelectedProduct());
     };
-  }, [productId]);
+  }, []);
 
   const addBasket = (item) => {
     dispatch(addToBasket(item));

@@ -62,7 +62,7 @@ const Clothes = () => {
             defaultValue={"default"}
             onChange={(e) => sortByLowPrice(e.target.value)}
           >
-            <option value="default" selected>
+            <option value="default">
               Filter products
             </option>
             <option value="">From last product</option>
