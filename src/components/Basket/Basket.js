@@ -36,7 +36,7 @@ const Basket = () => {
       <div className="basket-main">
         <div className="basket-product">
           {basketData.length === 0 ? (
-            <h4>Your basket is empty</h4>
+            <h1>Your basket is empty</h1>
           ) : (
             <h4>
               My {basketData.length}

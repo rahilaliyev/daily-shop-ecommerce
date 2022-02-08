@@ -1,9 +1,13 @@
 @import "../../style/_variables.scss";
 
 .loginPaper {
+  height: 50%;
   form {
     display: flex;
     flex-direction: column;
+    .error-message {
+      color: $mainColor;
+    }
     input {
       outline: none;
     }
